@@ -39,13 +39,13 @@ Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, t
 
 | Logo | Application | Description |
 |:----:|:------------|:------------|
-| ![Jellyfin](assets/jellyfin.png) | **Jellyfin** | Open-source personal media server. |
-| ![Emby](assets/emby.png) | **EmbyServer** | Media server with advanced metadata support. |
-| ![Tautulli](assets/tautulli.png) | **Tautulli** | Monitoring for Plex/Emby activity. |
-| ![Radarr](assets/radarr.png) | **Radarr** | Automated movie collection management. |
-| ![Sonarr](assets/sonarr.png) | **Sonarr** | Automated TV show downloading and organization. |
-| ![Overseerr](assets/overseerr.png) | **Overseerr** | Request management system for media libraries. |
-| ![Recyclarr](assets/recyclarr.png) | **Recyclarr** | Syncs Radarr/Sonarr quality profiles automatically. |
+| <img src="assets/jellyfin.png" width="24"> | **Jellyfin** | Open-source personal media server. |
+| <img src="assets/emby.png" width="24"> | **EmbyServer** | Media server with advanced metadata support. |
+| <img src="assets/tautulli.png" width="24"> | **Tautulli** | Monitoring for Plex/Emby activity. |
+| <img src="assets/radarr.png" width="24"> | **Radarr** | Automated movie collection management. |
+| <img src="assets/sonarr.png" width="24"> | **Sonarr** | Automated TV show downloading and organization. |
+| <img src="assets/overseerr.png" width="24"> | **Overseerr** | Request management system for media libraries. |
+| <img src="assets/recyclarr.png" width="24"> | **Recyclarr** | Syncs Radarr/Sonarr quality profiles automatically. |
 
 ---
 
@@ -53,11 +53,11 @@ Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, t
 
 | Logo | Application | Description |
 |:----:|:------------|:------------|
-| ![Netdata](assets/netdata.png) | **Netdata** | Real-time system monitoring and alerts. |
-| ![Glances](assets/glances.png) | **Glances** | Cross-platform system monitor. |
-| ![Homepage](assets/homepage.png) | **Homepage** | Dashboard for organizing self-hosted services. |
-| ![Dashy](assets/dashy.png) | **Dashy** | Dashboard focused on app links and widgets. |
-| ![Speedtest Tracker](assets/speedtest.png) | **Speedtest Tracker** | Internet connection monitoring. |
+| <img src="assets/netdata.png" width="24"> | **Netdata** | Real-time system monitoring and alerts. |
+| <img src="assets/glances.png" width="24"> | **Glances** | Cross-platform system monitor. |
+| <img src="assets/homepage.png" width="24"> | **Homepage** | Dashboard for organizing self-hosted services. |
+| <img src="assets/dashy.png" width="24"> | **Dashy** | Dashboard focused on app links and widgets. |
+| <img src="assets/speedtest.png" width="24"> | **Speedtest Tracker** | Internet connection monitoring. |
 
 ---
 
@@ -65,9 +65,9 @@ Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, t
 
 | Logo | Application | Description |
 |:----:|:------------|:------------|
-| ![Code-Server](assets/code-server.png) | **Code-Server** | Web-based VSCode IDE. |
-| ![RustDesk](assets/rustdesk.png) | **RustDesk Server** | Self-hosted remote desktop solution. |
-| ![Docker Socket Proxy](assets/docker.png) | **Docker Socket Proxy** | Secure docker.sock access. |
+| <img src="assets/code-server.png" width="24"> | **Code-Server** | Web-based VSCode IDE. |
+| <img src="assets/rustdesk.png" width="24"> | **RustDesk Server** | Self-hosted remote desktop solution. |
+| <img src="assets/docker.png" width="24"> | **Docker Socket Proxy** | Secure docker.sock access. |
 
 ---
 
@@ -75,10 +75,10 @@ Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, t
 
 | Logo | Application | Description |
 |:----:|:------------|:------------|
-| ![Nextcloud](assets/nextcloud.png) | **Nextcloud AIO** | Personal cloud platform for storage, collaboration, and backup. |
-| ![Immich](assets/immich.png) | **Immich** | High-speed AI-powered photo backup service. |
-| ![PhotoPrism](assets/photoprism.png) | **PhotoPrism** | Private photo management platform. |
-| ![Syncthing](assets/syncthing.png) | **Syncthing** | Decentralized peer-to-peer file sync. |
+| <img src="assets/nextcloud.png" width="24"> | **Nextcloud AIO** | Personal cloud platform for storage, collaboration, and backup. |
+| <img src="assets/immich.png" width="24"> | **Immich** | High-speed AI-powered photo backup service. |
+| <img src="assets/photoprism.png" width="24"> | **PhotoPrism** | Private photo management platform. |
+| <img src="assets/syncthing.png" width="24"> | **Syncthing** | Decentralized peer-to-peer file sync. |
 
 ---
 
@@ -86,12 +86,12 @@ Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, t
 
 | Logo | Application | Description |
 |:----:|:------------|:------------|
-| ![Traefik](assets/traefik.svg) | **Traefik** | Dynamic reverse proxy with SSL support. |
-| ![Authentik](assets/authentik.png) | **Authentik** | SSO and Identity provider. |
-| ![CrowdSec](assets/crowdsec.png) | **CrowdSec** | Collaborative IPS security tool. |
-| ![Pi-hole](assets/pihole.png) | **Pi-hole** | DNS-level ad-blocker for the entire network. |
-| ![Unbound](assets/unbound.png) | **Unbound** | Local DNS resolver. |
-| ![Cloudflare Tunnel](assets/cloudflare.png) | **Cloudflare Tunnel** | Securely connects homelab services to the public internet. |
+| <img src="assets/traefik.svg" width="24"> | **Traefik** | Dynamic reverse proxy with SSL support. |
+| <img src="assets/authentik.png" width="24"> | **Authentik** | SSO and Identity provider. |
+| <img src="assets/crowdsec.png" width="24"> | **CrowdSec** | Collaborative IPS security tool. |
+| <img src="assets/pihole.png" width="24"> | **Pi-hole** | DNS-level ad-blocker for the entire network. |
+| <img src="assets/unbound.png" width="24"> | **Unbound** | Local DNS resolver. |
+| <img src="assets/cloudflare.png" width="24"> | **Cloudflare Tunnel** | Securely connects homelab services to the public internet. |
 
 ---
 
@@ -99,9 +99,9 @@ Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, t
 
 | Logo | Application | Description |
 |:----:|:------------|:------------|
-| ![PostgreSQL](assets/postgresql.png) | **PostgreSQL** | Database for Authentik and Immich. |
-| ![MariaDB](assets/mariadb.png) | **MariaDB** | Database for Nextcloud. |
-| ![Redis](assets/redis.png) | **Redis** | In-memory database and cache. |
+| <img src="assets/postgresql.png" width="24"> | **PostgreSQL** | Database for Authentik and Immich. |
+| <img src="assets/mariadb.png" width="24"> | **MariaDB** | Database for Nextcloud. |
+| <img src="assets/redis.png" width="24"> | **Redis** | In-memory database and cache. |
 
 ---
 
