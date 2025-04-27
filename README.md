@@ -39,13 +39,13 @@ Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, t
 
 | Logo | Application | Description |
 |:----:|:------------|:------------|
-| ![Jellyfin](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jellyfin.svg) | **Jellyfin** | Open-source personal media server. |
-| ![Emby](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/emby.svg) | **EmbyServer** | Media server with advanced metadata support. |
-| ![Tautulli](https://raw.githubusercontent.com/Tautulli/Tautulli/master/data/interfaces/default/images/logo.png) | **Tautulli** | Monitoring for Plex/Emby activity. |
-| ![Radarr](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/radarr.svg) | **Radarr** | Automated movie collection management. |
-| ![Sonarr](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/sonarr.svg) | **Sonarr** | Automated TV show downloading and organization. |
-| ![Overseerr](https://raw.githubusercontent.com/sct/overseerr/develop/public/logo_full.svg) | **Overseerr** | Request management system for media libraries. |
-| ![Recyclarr](https://raw.githubusercontent.com/Recyclarr/recyclarr/develop/src/assets/logo/recyclarr.svg) | **Recyclarr** | Syncs Radarr/Sonarr quality profiles automatically. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jellyfin.svg" alt="Jellyfin" width="24" /> | **Jellyfin** | Open-source personal media server. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/emby.svg" alt="Emby" width="24" /> | **EmbyServer** | Media server with advanced metadata support. |
+| <img src="https://raw.githubusercontent.com/Tautulli/Tautulli/master/data/interfaces/default/images/logo.png" alt="Tautulli" width="24" /> | **Tautulli** | Monitoring for Plex/Emby activity. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/radarr.svg" alt="Radarr" width="24" /> | **Radarr** | Automated movie collection management. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/sonarr.svg" alt="Sonarr" width="24" /> | **Sonarr** | Automated TV show downloading and organization. |
+| <img src="https://raw.githubusercontent.com/sct/overseerr/develop/public/logo_full.svg" alt="Overseerr" width="24" /> | **Overseerr** | Request management system for media libraries. |
+| <img src="https://raw.githubusercontent.com/Recyclarr/recyclarr/develop/src/assets/logo/recyclarr.svg" alt="Recyclarr" width="24" /> | **Recyclarr** | Syncs Radarr/Sonarr quality profiles automatically. |
 
 > 📌 **Why I chose Jellyfin:** Fully open-source, customizable clients, no license fees.
 
@@ -55,11 +55,11 @@ Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, t
 
 | Logo | Application | Description |
 |:----:|:------------|:------------|
-| ![Netdata](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/netdata.svg) | **Netdata** | Real-time system monitoring and alerts. |
-| ![Glances](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/glances.svg) | **Glances** | Cross-platform system monitor. |
-| ![Homepage](https://raw.githubusercontent.com/gethomepage/homepage/main/public/logo.png) | **Homepage** | Dashboard for organizing self-hosted services. |
-| ![Dashy](https://raw.githubusercontent.com/Lissy93/dashy/main/public/icon.png) | **Dashy** | Dashboard focused on app links and widgets. |
-| ![Speedtest Tracker](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/speedtest.svg) | **Speedtest Tracker** | Internet connection monitoring. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/netdata.svg" alt="Netdata" width="24" /> | **Netdata** | Real-time system monitoring and alerts. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/glances.svg" alt="Glances" width="24" /> | **Glances** | Cross-platform system monitor. |
+| <img src="https://raw.githubusercontent.com/gethomepage/homepage/main/public/logo.png" alt="Homepage" width="24" /> | **Homepage** | Dashboard for organizing self-hosted services. |
+| <img src="https://raw.githubusercontent.com/Lissy93/dashy/main/public/icon.png" alt="Dashy" width="24" /> | **Dashy** | Dashboard focused on app links and widgets. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/speedtest.svg" alt="Speedtest Tracker" width="24" /> | **Speedtest Tracker** | Internet connection monitoring. |
 
 ---
 
@@ -67,9 +67,9 @@ Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, t
 
 | Logo | Application | Description |
 |:----:|:------------|:------------|
-| ![Code-Server](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/visualstudiocode.svg) | **Code-Server** | Web-based VSCode IDE. |
-| ![RustDesk](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/rustdesk.svg) | **RustDesk Server** | Self-hosted remote desktop solution. |
-| ![Docker Socket Proxy](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/docker.svg) | **Docker Socket Proxy** | Secure docker.sock access. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/visualstudiocode.svg" alt="Code-Server" width="24" /> | **Code-Server** | Web-based VSCode IDE. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/rustdesk.svg" alt="RustDesk Server" width="24" /> | **RustDesk Server** | Self-hosted remote desktop solution. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/docker.svg" alt="Docker Socket Proxy" width="24" /> | **Docker Socket Proxy** | Secure docker.sock access. |
 
 ---
 
@@ -77,10 +77,10 @@ Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, t
 
 | Logo | Application | Description |
 |:----:|:------------|:------------|
-| ![Nextcloud](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nextcloud.svg) | **Nextcloud AIO** | Personal cloud platform for storage, collaboration, and backup. |
-| ![Immich](https://raw.githubusercontent.com/immich-app/immich/main/apps/website/public/logo-color.png) | **Immich** | High-speed AI-powered photo backup service. |
-| ![PhotoPrism](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/photoprism.svg) | **PhotoPrism** | Private photo management platform. |
-| ![Syncthing](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/syncthing.svg) | **Syncthing** | Decentralized peer-to-peer file sync. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nextcloud.svg" alt="Nextcloud" width="24" /> | **Nextcloud AIO** | Personal cloud platform for storage, collaboration, and backup. |
+| <img src="https://raw.githubusercontent.com/immich-app/immich/main/apps/website/public/logo-color.png" alt="Immich" width="24" /> | **Immich** | High-speed AI-powered photo backup service. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/photoprism.svg" alt="PhotoPrism" width="24" /> | **PhotoPrism** | Private photo management platform. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/syncthing.svg" alt="Syncthing" width="24" /> | **Syncthing** | Decentralized peer-to-peer file sync. |
 
 ---
 
@@ -88,12 +88,12 @@ Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, t
 
 | Logo | Application | Description |
 |:----:|:------------|:------------|
-| ![Traefik](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/traefik.svg) | **Traefik** | Dynamic reverse proxy with SSL support. |
-| ![Authentik](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/authentik.svg) | **Authentik** | SSO and Identity provider. |
-| ![CrowdSec](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/crowdsec.svg) | **CrowdSec** | Collaborative IPS security tool. |
-| ![Pi-hole](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/pihole.svg) | **Pi-hole** | DNS-level ad-blocker for the entire network. |
-| ![Unbound](https://www.nlnetlabs.nl/logo/nlnetlabs_logo_color.svg) | **Unbound** | Local DNS resolver. |
-| ![Cloudflare Tunnel](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/cloudflare.svg) | **Cloudflare Tunnel** | Securely connects homelab services to the public internet. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/traefik.svg" alt="Traefik" width="24" /> | **Traefik** | Dynamic reverse proxy with SSL support. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/authentik.svg" alt="Authentik" width="24" /> | **Authentik** | SSO and Identity provider. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/crowdsec.svg" alt="CrowdSec" width="24" /> | **CrowdSec** | Collaborative IPS security tool. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/pihole.svg" alt="Pi-hole" width="24" /> | **Pi-hole** | DNS-level ad-blocker for the entire network. |
+| <img src="https://www.nlnetlabs.nl/logo/nlnetlabs_logo_color.svg" alt="Unbound" width="24" /> | **Unbound** | Local DNS resolver. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/cloudflare.svg" alt="Cloudflare Tunnel" width="24" /> | **Cloudflare Tunnel** | Securely connects homelab services to the public internet. |
 
 > 📌 **Why I chose Traefik:** Automatic SSL, seamless Docker integration, flexibility.
 
@@ -103,9 +103,9 @@ Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, t
 
 | Logo | Application | Description |
 |:----:|:------------|:------------|
-| ![PostgreSQL](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/postgresql.svg) | **PostgreSQL** | Database for Authentik and Immich. |
-| ![MariaDB](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mariadb.svg) | **MariaDB** | Database for Nextcloud. |
-| ![Redis](https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/redis.svg) | **Redis** | In-memory database and cache. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/postgresql.svg" alt="PostgreSQL" width="24" /> | **PostgreSQL** | Database for Authentik and Immich. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mariadb.svg" alt="MariaDB" width="24" /> | **MariaDB** | Database for Nextcloud. |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/redis.svg" alt="Redis" width="24" /> | **Redis** | In-memory database and cache. |
 
 ---
 
