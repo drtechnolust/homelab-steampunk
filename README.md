@@ -11,13 +11,16 @@ Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, t
 
 ## 🛡️ Principles
 
-- All services run in **Docker containers**.
-- **Traefik** is used as the ingress controller and reverse proxy.
-- **Cloudflare Tunnel** securely exposes select apps without open ports.
-- **Unraid** provides simple, flexible storage management.
-- Monitoring, automation, and backup services run across **NVMe cache pools** and a robust **array** of HDDs.
-- Preference for **open-source** solutions wherever possible.
-- Secrets and sensitive configs are separated and minimized for security.
+- **Containerization First**: All services are deployed in isolated containers to ensure modularity, resilience, and effortless scalability.
+- **Secure Ingress and Traffic Control**: All inbound and internal traffic is dynamically routed with SSL encryption, strict routing policies, and minimal attack surface exposure.
+- **Identity and Access Governance**: Centralized authentication and fine-grained access controls are enforced across all services, ensuring that only trusted identities gain appropriate access to protected resources.
+- **Zero-Trust External Access**: External connectivity operates under a zero-trust model, leveraging encrypted tunnels and forward authentication to prevent unauthorized entry.
+- **Resilient Storage Architecture**: Storage combines fast NVMe caching with a robust hard drive array to balance performance, redundancy, and expansion without compromising data integrity.
+- **Holistic System Monitoring and Automation**: System health, automation, and backup processes are fully integrated across storage and service layers to ensure uptime, efficiency, and rapid recovery capabilities.
+- **Open-Source Ethos**: The environment is designed around open-source solutions, prioritizing transparency, adaptability, and community-driven innovation.
+- **Continuous Optimization and Fortification**: All systems undergo continuous evaluation and refinement to improve performance, bolster security, and integrate the latest technological advancements.
+- **Purpose-Driven Design**: Every deployed component is selected based on long-term reliability, operational excellence, and alignment with the homelab’s evolving mission.
+
 
 ---
 
