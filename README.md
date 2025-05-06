@@ -1,6 +1,6 @@
 ![SteamPunk Homelab](assets/cover.png)
 
-# 🚀 SteamPunk Homelab
+# SteamPunk Homelab
 
 Welcome to my cyberpunk-themed homelab — a playground where learning, automation, and entertainment collide.  
 Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, this environment balances serious production reliability with a spirit of experimentation.
@@ -9,7 +9,7 @@ Powered by Unraid, Docker, and secured through Traefik and Cloudflare Tunnels, t
 
 ---
 
-## 🛡️ Principles
+## Principles
 
 - **Containerization First**: All services are deployed in isolated containers to ensure modularity, resilience, and effortless scalability.
 - **Secure Ingress and Traffic Control**: All inbound and internal traffic is dynamically routed with SSL encryption, strict routing policies, and minimal attack surface exposure.
