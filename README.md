@@ -181,9 +181,28 @@ Most application containers operate on the `steampunknet` custom Docker network,
 
 ---
 
-## Documentation
+# Documentation
 
+Architecture and Core
 - [Architecture](docs/architecture.md)
+- [Platform Map](docs/architecture-map.md)
+- [Security and Access Model](docs/security.md)
+- [Storage Architecture](docs/storage.md)
+- [Monitoring and Operations](docs/monitoring.md)
+- [Virtualization](docs/virtualization.md)
+
+Service Stacks
+- [Media Stack](docs/media-stack.md)
+- [Media Stack Map](docs/media-stack-map.md)
+- [Paperless Document Stack](docs/paperless.md)
+- [Nextcloud Stack](docs/nextcloud.md)
+- [AI Stack](docs/ai-stack.md)
+- [Photos, Cameras, and Smart Home](docs/photos-smart-home.md)
+
+Inventory
+- [Application Inventory](docs/inventory.md)
+- [Share Inventory](docs/shares.md)
+- [Network Inventory](inventory/networks)
 
 # 🙏 Credits & Inspiration
 
