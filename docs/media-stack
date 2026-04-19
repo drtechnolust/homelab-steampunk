@@ -1,77 +1,88 @@
-# Media Stack
+# 🎬 Media Stack
 
-A segmented media automation and delivery platform built around separate acquisition workflows, shared libraries, and dual playback platforms.
+A segmented media automation and delivery platform built around shared libraries, separate acquisition workflows, controlled remote access, and dual playback platforms.
 
-> Emby is the primary playback platform. Jellyfin is the secondary platform.
-> Remote access is handled through Tailscale only.
+> **Primary platform:** Emby  
+> **Secondary platform:** Jellyfin  
+> **Remote access:** Tailscale only  
+> **Public exposure:** None
 
 ---
 
-# At a Glance
+# 🧭 Media Stack Snapshot
 
 | Area | Current Design |
 |:--|:--|
-| Primary playback | Emby |
-| Secondary playback | Jellyfin |
+| Primary playback platform | Emby |
+| Secondary playback platform | Jellyfin |
 | Shared libraries | Yes |
-| Public exposure | None |
-| Remote access | Tailscale only |
-| Automation style | Segmented Sonarr/Radarr + import lists |
+| Public media exposure | None |
+| Remote access outside home | Tailscale only |
+| Automation model | Segmented Sonarr/Radarr instances |
+| Discovery model | Import lists + requests |
 | Standards influence | Trash Guides |
+| Retired platform | Plex |
 
 ---
 
-# Core Platforms
+# 🏗️ Platform Layout
 
-| Service | Role | Notes |
+| Platform | Role | Notes |
 |:--|:--|:--|
-| Emby | Primary media server | Main day-to-day playback platform |
-| Jellyfin | Secondary media server | FOSS-first alternate interface using the same libraries |
-| Plex | Retired | No longer used due to platform direction and preference for more self-hosted-first options |
+| Emby | Primary playback platform | Main day-to-day media experience |
+| Jellyfin | Secondary playback platform | Alternate FOSS-first interface using the same libraries |
+| Plex | Retired | No longer used due to platform direction, ads, and preference for more self-hosted-first options |
+
+Emby and Jellyfin point to the same underlying media libraries, allowing both platforms to operate against the same content base without maintaining separate collections.
 
 ---
 
-# Segmented Automation
+# 🧩 Segmented Automation Design
 
-The automation layer is intentionally split to keep workflows cleaner and better scoped.
+The automation layer is intentionally split to keep workflows cleaner, more targeted, and easier to maintain.
 
 | Service Group | Purpose |
 |:--|:--|
-| Sonarr | General TV |
+| Sonarr | General TV workflows |
 | Sonarr Anime | Anime-focused TV workflows |
 | Sonarr Kids | Kids-focused TV workflows |
-| Radarr | General movies |
+| Radarr | General movie workflows |
 | Radarr Anime | Anime movie workflows |
 | Radarr Kids | Kids movie workflows |
+| Lidarr | Music workflows |
 
 This separation improves:
-- library hygiene
-- automation clarity
+
+- cleaner library hygiene
 - safer content boundaries
-- easier long-term maintenance
+- more specialized anime handling
+- simpler long-term maintenance
+- less clutter in automation logic
 
 ---
 
-# Import Lists
+# 📥 Import Lists & Automated Discovery
 
-Import lists are used to automate discovery and reduce manual adds.
+Import lists are a meaningful part of the media workflow and help reduce manual adds.
 
-Examples currently used in the stack include:
-- streaming TV lists
+They are used for things like:
+
+- streaming TV discovery
 - Trakt-based imports
-- anime lists
+- anime-focused lists
 - curated movie-user lists
-- specialty collection lists such as Studio Ghibli
+- specialty collection lists
+- themed imports such as Studio Ghibli
 
-Trash Guides is an important influence here, especially for keeping automation logic more standardized and maintainable over time.
+Trash Guides is also an important influence here, especially for keeping media automation more standardized, maintainable, and aligned with cleaner long-term practices.
 
 ---
 
-# Supporting Services
+# ⚙️ Supporting Services
 
 | Service | Function |
 |:--|:--|
-| Prowlarr | Indexer management |
+| Prowlarr | Indexer aggregation and management |
 | Bazarr | Subtitle workflows |
 | Overseerr | Request workflow feeding Jellyfin |
 | qBittorrentVPN | Torrent-based downloads |
@@ -82,28 +93,31 @@ Trash Guides is an important influence here, especially for keeping automation l
 
 ---
 
-# Access Model
+# 🔐 Access Model
 
 > Nothing in the media stack is exposed directly to the internet.
 
 Media access is designed around:
-- internal access at home
+
+- internal home access
 - private remote access through Tailscale
-- no public-facing media exposure
+- no public-facing media endpoints
+
+This keeps the stack aligned with the broader self-hosted security model while still making remote use practical.
 
 ---
 
-# Workflow Summary
+# 🔄 Workflow Overview
 
 ```text
-Request / List Import
-        ↓
+Import Lists / Requests
+          ↓
  Sonarr / Radarr / Lidarr
-        ↓
+          ↓
  qBittorrentVPN / SABnzbd
-        ↓
- Unpackerr / Autoscan
-        ↓
- Shared Media Libraries
-        ↓
-  Emby (Primary) / Jellyfin (Secondary)
+          ↓
+  Unpackerr / Autoscan
+          ↓
+   Shared Media Libraries
+          ↓
+ Emby (Primary) / Jellyfin (Secondary)
