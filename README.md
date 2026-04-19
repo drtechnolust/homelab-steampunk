@@ -181,6 +181,10 @@ Most application containers operate on the `steampunknet` custom Docker network,
 
 ---
 
+## Documentation
+
+- [Architecture](docs/architecture.md)
+
 # 🙏 Credits & Inspiration
 
 This homelab did not come together in a vacuum. A lot of what I built was influenced by the self-hosting community — especially the creators who share their knowledge through videos, walkthroughs, and real-world examples.
