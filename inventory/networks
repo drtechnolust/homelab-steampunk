@@ -1,0 +1,185 @@
+# Network Inventory
+
+A practical overview of the main Docker and service network boundaries used across Homelab Steampunk.
+
+> Primary application network: `steampunknet`  
+> Dedicated stack networks: `nextcloud-aio`, `seafile-net`  
+> LAN-facing services: `br0`  
+> Host-integrated services: `host`
+
+---
+
+# At a Glance
+
+| Network | Primary Role | Notes |
+|:--|:--|:--|
+| `steampunknet` | Main application network | Primary network for most containers |
+| `nextcloud-aio` | Dedicated Nextcloud stack network | Isolates the AIO service family |
+| `seafile-net` | Dedicated Seafile network | Keeps Seafile and its DB grouped |
+| `br0` | LAN-facing infrastructure | Used for services that benefit from direct LAN presence |
+| `host` | Host-integrated services | Used when direct host visibility or integration is needed |
+| `bridge` | Default Docker bridge | Used selectively for a smaller number of services |
+
+---
+
+# Core Network Roles
+
+| Network | Role | Why It Exists |
+|:--|:--|:--|
+| `steampunknet` | Main application backbone | Keeps most application containers in a shared custom network instead of a flat default layout |
+| `nextcloud-aio` | Stack-specific grouping | Keeps Nextcloud AIO components logically grouped and more isolated |
+| `seafile-net` | Service-specific grouping | Creates a cleaner network boundary for Seafile and its backend |
+| `br0` | Local network service presence | Supports services that belong more naturally on the LAN |
+| `host` | Direct host integration | Supports services that need tighter host-level visibility or behavior |
+| `bridge` | Limited default use | Retained where the default Docker bridge is sufficient |
+
+---
+
+# Network Membership Overview
+
+## `steampunknet`
+
+This is the primary custom Docker network and the main backbone for the application stack.
+
+Typical services on this network include:
+
+- Traefik
+- Authentik
+- CrowdSec-related services
+- Homepage
+- Glances
+- most media services
+- AI services
+- Paperless services
+- Immich
+- PhotoPrism
+- many utility and support containers
+
+This is the main network that ties together the broader service ecosystem.
+
+---
+
+## `nextcloud-aio`
+
+This network is dedicated to the Nextcloud AIO stack.
+
+Typical services on this network include:
+
+- Nextcloud AIO Master
+- Nextcloud AIO Apache
+- Nextcloud AIO Nextcloud
+- Nextcloud Talk
+- Nextcloud Collabora
+- Nextcloud Whiteboard
+- Nextcloud Full Text Search
+- Nextcloud database and Redis support services
+
+This keeps the Nextcloud stack grouped and more self-contained.
+
+---
+
+## `seafile-net`
+
+This network is dedicated to Seafile and its supporting database service.
+
+Typical services on this network include:
+
+- Seafile
+- Seafile MariaDB
+
+This provides a simpler and more isolated service boundary for that stack.
+
+---
+
+## `br0`
+
+This network is used for services that are better treated as LAN-facing infrastructure rather than ordinary web applications.
+
+Typical services on this network include:
+
+- Pi-hole
+- Unbound
+
+This makes sense for DNS services that need a more direct local-network role.
+
+---
+
+## `host`
+
+This network is used for services that benefit from direct host-level visibility or integration.
+
+Typical services on this network include:
+
+- Netdata
+- RustDesk Server
+- HomeAssistant_inabox
+
+This is used intentionally rather than broadly.
+
+---
+
+## `bridge`
+
+The default Docker bridge is still used for a small number of services where a custom or special-purpose network is not necessary.
+
+Typical services on this network include:
+
+- Uptime Kuma
+- Unraid API
+
+---
+
+# Design Intent
+
+The network model is designed to avoid treating every container the same way.
+
+Instead, services are grouped based on what they are doing:
+
+- main application traffic
+- dedicated stack isolation
+- LAN-facing infrastructure
+- host-integrated services
+- limited default bridge use
+
+This creates a cleaner architecture and makes the homelab easier to reason about than a fully flat deployment model.
+
+---
+
+# Why This Matters
+
+This network layout provides:
+
+- clearer service boundaries
+- cleaner application grouping
+- better alignment between role and placement
+- easier architectural documentation
+- less reliance on one generic network pattern
+- a more intentional platform design
+
+It also makes it easier to explain how major stacks such as Nextcloud, Seafile, DNS services, and the general application layer relate to one another.
+
+---
+
+# Relationship to the Broader Homelab
+
+The network layout supports the overall platform by separating:
+
+- application access
+- stack-specific communication
+- LAN-oriented infrastructure
+- host-integrated services
+- limited bridge-based deployments
+
+This is one of the structural pieces that helps the homelab feel like a real platform instead of just a list of containers.
+
+---
+
+# Notes
+
+Future additions could include:
+
+- a visual network diagram
+- per-network service inventories
+- ingress path notes
+- internal-only vs user-facing service mapping
+- public vs private access classification
