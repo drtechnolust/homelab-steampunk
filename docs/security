@@ -1,0 +1,254 @@
+# Security & Access Model
+
+Homelab Steampunk uses a layered access model that combines reverse proxying, identity-aware protection, DNS control, selective external publishing, and service-level segmentation.
+
+The goal is not to expose everything publicly, but to intentionally control how services are reached, protected, and separated based on their role.
+
+---
+
+## Security Philosophy
+
+The platform follows a few core security principles:
+
+- **Minimize unnecessary exposure**
+- **Prefer selective publishing over blanket public access**
+- **Use identity-aware controls for protected applications**
+- **Separate internal-only, LAN-facing, and externally reachable services**
+- **Use layered controls rather than relying on one tool alone**
+- **Continuously refine the access model as the homelab evolves**
+
+This is a practical self-hosting security model designed for a real mixed-use homelab environment.
+
+---
+
+## Core Security Components
+
+### Traefik
+Traefik acts as the primary reverse proxy for selected services.
+
+Its role includes:
+- routing requests to backend services
+- handling HTTPS entrypoints
+- applying middleware policies
+- supporting label-driven service discovery
+- serving as the central ingress layer for protected and proxied applications
+
+Traefik is one of the main control points in the environment and is part of how the platform avoids a flat, unmanaged port-exposure model.
+
+### Authentik
+Authentik provides centralized identity and access control for selected services.
+
+Its role includes:
+- authentication flows
+- protected application entry points
+- forward-auth style protection patterns
+- identity-aware access decisions
+- support for a cleaner and more centralized sign-in model
+
+Authentik is the active identity layer in the current platform design.
+
+### CrowdSec
+CrowdSec is used as part of the security stack for behavior-based protection and threat-response workflows.
+
+Its role includes:
+- analyzing events and logs
+- identifying suspicious patterns
+- generating remediation decisions
+- contributing to a more adaptive protection model
+
+This component is part of the active design, though tuning and operational refinement may still be ongoing.
+
+### CrowdSec Traefik Bouncer
+The Traefik bouncer integrates CrowdSec decisions into the reverse proxy layer.
+
+Its role includes:
+- enforcing CrowdSec decisions at the ingress layer
+- helping block or challenge unwanted requests before they reach protected services
+- connecting behavioral analysis to live request handling
+
+### Pi-hole
+Pi-hole provides LAN-level DNS filtering.
+
+Its role includes:
+- blocking ad and tracker domains
+- improving local DNS visibility
+- acting as a local DNS control point
+- supporting internal network hygiene
+
+### Unbound
+Unbound provides recursive DNS resolution and pairs with Pi-hole as part of the DNS design.
+
+Its role includes:
+- recursive DNS lookups
+- DNSSEC-aware validation
+- reduced dependency on third-party recursive resolvers
+- improved DNS control and local resolution behavior
+
+### Cloudflare Tunnel
+Cloudflare Tunnel is used for selective external publishing.
+
+Its role includes:
+- exposing chosen services without broadly opening inbound ports
+- reducing direct public exposure
+- supporting a zero-trust-style access model for external reachability
+- working alongside reverse proxy and identity controls where appropriate
+
+---
+
+## Access Model
+
+The homelab does not treat every service the same way.  
+Instead, access is split into several practical categories.
+
+### 1. Internal Direct-Port Access
+Some services are reachable directly by local port for administration, testing, or local-only operation.
+
+This is commonly used for:
+- admin interfaces
+- utility tools
+- service troubleshooting
+- platforms that are primarily local-use
+
+Examples in the broader environment include dashboards, media tools, AI interfaces, and administrative utilities.
+
+### 2. Reverse-Proxied Access
+Selected services are placed behind Traefik and accessed through routed hostnames rather than only raw ports.
+
+This is used to:
+- centralize ingress
+- make service URLs cleaner
+- support HTTPS entrypoints
+- apply middleware policies
+- integrate identity-aware controls more cleanly
+
+### 3. Identity-Protected Access
+Some proxied services can be protected with Authentik to require authentication before access is granted.
+
+This is used where:
+- access should be restricted
+- external reachability exists
+- a shared sign-in model is preferred
+- direct anonymous access is not appropriate
+
+### 4. LAN-Facing Network Services
+Certain infrastructure services are intentionally LAN-facing rather than reverse-proxied.
+
+This applies especially to DNS services such as:
+- Pi-hole
+- Unbound
+
+These services are part of the internal network design and do not fit the same model as web applications.
+
+### 5. Selectively Published External Services
+Only chosen services should be externally reachable, and those are ideally published through more controlled paths rather than simple broad port exposure.
+
+Cloudflare Tunnel supports this approach by allowing selected services to be exposed without relying on traditional wide-open inbound publishing.
+
+---
+
+## Network Placement and Security Implications
+
+Different Docker networks are used depending on service role.
+
+### `steampunknet`
+This is the primary application network and hosts most of the main stack.
+
+Security benefits:
+- central app-to-app communication zone
+- cleaner service grouping
+- easier reverse proxy relationships
+- better separation than default flat placement
+
+### `nextcloud-aio`
+Used to isolate and group the Nextcloud AIO service family.
+
+Security benefits:
+- keeps Nextcloud components logically grouped
+- reduces unnecessary mixing with unrelated application containers
+- supports service-specific isolation
+
+### `seafile-net`
+Used for Seafile and its related backend components.
+
+Security benefits:
+- application-specific grouping
+- cleaner service boundary for alternate document platform components
+
+### `br0`
+Used for services that need LAN presence.
+
+Security implications:
+- appropriate for infrastructure services like DNS
+- should be used more deliberately than generic application services
+- best reserved for workloads that truly benefit from direct LAN identity
+
+### `host`
+Used for selected services that need host-level integration or visibility.
+
+Security implications:
+- more powerful access to the underlying host context
+- should be used intentionally and sparingly
+- appropriate only when bridge/custom network models are not the best fit
+
+### `bridge`
+Used for a smaller number of services where the default Docker bridge remains acceptable.
+
+---
+
+## Practical Security Boundaries
+
+In practice, the environment can be thought of in these tiers:
+
+### Public or Semi-Public Entry Layer
+- Traefik
+- Cloudflare Tunnel
+- selected routed services
+- identity-aware access entry points
+
+### Protected Application Layer
+- applications behind reverse proxy and/or authentication
+- services intended for cleaner managed access
+- internal apps that may still have local admin ports
+
+### Internal Services Layer
+- databases
+- helper services
+- indexing services
+- worker containers
+- service-to-service components not meant for direct user access
+
+### LAN Infrastructure Layer
+- DNS services
+- local network utility components
+- service endpoints intended for internal devices rather than browser-facing use
+
+---
+
+## Current Security Direction
+
+The security model is actively evolving toward:
+
+- more consistency between direct-port and proxied access
+- clearer distinction between internal-only and externally reachable services
+- tighter use of Authentik for protected apps
+- better visibility into what is exposed and why
+- improved operational maturity around the CrowdSec layer
+- continued reduction of legacy access patterns where they no longer fit
+
+---
+
+## Security Notes
+
+This is a personal homelab security model, not a claim of perfect hardening.
+
+The environment balances:
+- practical usability
+- selective exposure
+- layered protections
+- experimentation with modern self-hosting security patterns
+
+As the platform evolves, this page should be updated to reflect:
+- what is currently published
+- what is protected
+- what remains internal-only
+- what parts of the stack are still transitional or being refined
