@@ -190,6 +190,7 @@ Architecture and Core
 - [Storage Architecture](docs/storage.md)
 - [Monitoring and Operations](docs/monitoring.md)
 - [Virtualization](docs/virtualization.md)
+- 
 
 Service Stacks
 - [Media Stack](docs/media-stack.md)
@@ -198,6 +199,7 @@ Service Stacks
 - [Nextcloud Stack](docs/nextcloud.md)
 - [AI Stack](docs/ai-stack.md)
 - [Photos, Cameras, and Smart Home](docs/photos-smart-home.md)
+- [Document Management System Map](docs/paperless-map.md)
 
 Inventory
 - [Application Inventory](docs/inventory.md)
