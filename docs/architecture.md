@@ -38,11 +38,17 @@ The platform is organized into several major service domains.
 ### Media & Automation
 This domain handles acquisition, organization, requests, subtitles, playback, and watch-state synchronization.
 
+The media stack is intentionally segmented across multiple Sonarr and Radarr instances to separate general, anime, and kids-focused workflows. This keeps libraries cleaner, supports more specialized automation behavior, and allows safer content boundaries across different media types.
+
 Key services include:
 - Jellyfin
 - Emby
 - Sonarr
+- Sonarr Anime
+- Sonarr Kids
 - Radarr
+- Radarr Anime
+- Radarr Kids
 - Lidarr
 - Bazarr
 - Prowlarr
