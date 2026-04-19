@@ -187,13 +187,14 @@ This homelab did not come together in a vacuum. A lot of what I built was influe
 
 ## Biggest Influences
 
-- **Spaceinvader One** — The biggest influence on this build by far. His Unraid content helped shape a large part of how I approached containers, storage, virtualization, and homelab design.
-- **IBRACORP** — Inspiration for cleaner service architecture, reverse proxy design, and security-minded self-hosting.
-- **AlienTech42** — Great source of ideas for practical homelab workflows and service exploration.
-- **Christian Lempa** — Inspiration for infrastructure thinking, self-hosting mindset, and polished homelab presentation.
-- **Techno Tim** — Helpful inspiration for self-hosting, automation, and discovering new tools and ideas.
+- **[Spaceinvader One](https://www.youtube.com/@SpaceinvaderOne)** — The biggest influence on this build by far. His Unraid content helped shape a large part of how I approached containers, storage, virtualization, and homelab design.
+- **[IBRACORP](https://www.youtube.com/@IBRACORP)** — Inspiration for cleaner service architecture, reverse proxy design, and security-minded self-hosting.
+- **[AlienTech42](https://www.youtube.com/@AlienTech42)** — Great source of ideas for practical homelab workflows and service exploration.
+- **[Christian Lempa](https://www.youtube.com/@christianlempa)** — Inspiration for infrastructure thinking, self-hosting mindset, and polished homelab presentation.
+- **[Techno Tim](https://www.youtube.com/@TechnoTim)** — Helpful inspiration for self-hosting, automation, and discovering new tools and ideas.
 
 A sincere thank you to the broader open-source and self-hosting community for making learning and building projects like this possible.
+
 # 🏅 Badges
 
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/drtechnolust/homelab-steampunk)
